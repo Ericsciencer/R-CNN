@@ -104,5 +104,4 @@ Official dataset page: http://host.robots.ox.ac.uk/pascal/VOC/voc2007/
 
 ---
 ## 原文章 | Original article
-Girshick R, Donahue J, Darrell T, et al. Rich feature hierarchies for accurate object detection and semantic segmentation[C]. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 2014: 580‑587.  
-arXiv preprint: arXiv:1311.2524.
+Girshick R, Donahue J, Darrell T, et al. Rich feature hierarchies for accurate object detection and semantic segmentation[C]. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 2014: 580‑587. arXiv preprint: arXiv:1311.2524.
