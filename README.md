@@ -18,10 +18,9 @@
 ---
 
 ## 简介
-R‑CNN（Regions with CNN features）由 Ross Girshick 等人于 2014 年提出，是目标检测领域**首次成功将深度卷积神经网络与区域提议相结合的里程碑工作**。在 R‑CNN 之前，目标检测主要依赖手工特征（如 HOG、SIFT）搭配滑窗或部件模型，检测精度受限且难以泛化。R‑CNN 独创性地引入**“区域提议 + CNN 特征提取 + SVM 分类”的级联框架**，并补充**边界框回归**进行空间精修，在 PASCAL VOC 2012 数据集上将 mAP 一举提升至 53.3%，较传统方法提升超过 30%。该方法不仅证明了预训练 CNN 可以迁移为强大的目标检测特征提取器，更开创了**两阶段检测器**（Two‑Stage Detector）的先河，直接启发 Fast R‑CNN、Faster R‑CNN 等后续经典工作，是深度学习目标检测领域的奠基之作。
+R‑CNN（Regions with CNN features）由 Ross Girshick 等人于 2014 年提出，是目标检测领域**首次成功将深度卷积神经网络与区域提议相结合的里程碑工作**。在 R‑CNN 之前，目标检测主要依赖手工特征（如 HOG、SIFT）搭配滑窗或部件模型，检测精度受限且难以泛化。R‑CNN 独创性地引入“区域提议 + CNN 特征提取 + SVM 分类”的级联框架，并补充**边界框回归**进行空间精修，在 PASCAL VOC 2012 数据集上将 mAP 一举提升至 53.3%，较传统方法提升超过 30%。该方法不仅证明了预训练 CNN 可以迁移为强大的目标检测特征提取器，更开创了**两阶段检测器**（Two‑Stage Detector）的先河，直接启发 Fast R‑CNN、Faster R‑CNN 等后续经典工作，是深度学习目标检测领域的奠基之作。
 
 <img width="500" height="297" alt="test_detection_output" src="https://github.com/user-attachments/assets/cde67305-e167-4d87-8bf3-fc7a9d17ad2e" />
-（示意图：从输入图像到最终检测框的完整流程）
 
 ## 架构
 本次复现严格遵循原始 R‑CNN 的四阶段设计，整体分为「候选区域生成」「CNN 特征提取」「SVM 分类与边框回归训练」和「推理后处理」四大模块，并使用预训练 AlexNet 作为特征提取骨干网络。为适应小规模复现需求，在数据集和部分超参数上进行了适当调整，但核心架构完全保留。
@@ -64,7 +63,7 @@ R-CNN执行流程：
 
 ## Introduction
 R‑CNN (Regions with CNN features), proposed by Ross Girshick et al. in 2014, is a milestone work that **first successfully combined deep convolutional neural networks with region proposals** for object detection. Before R‑CNN, detection relied heavily on hand‑crafted features with sliding windows or part‑based models, resulting in limited accuracy. R‑CNN innovatively introduced a cascade framework of **region proposal + CNN feature extraction + SVM classification**, augmented with **bounding‑box regression** for spatial refinement. It achieved 53.3% mAP on PASCAL VOC 2012, a >30% improvement over traditional methods. This work proved that pre‑trained CNNs can serve as powerful feature extractors for detection, pioneering the **two‑stage detector** paradigm and directly inspiring Fast R‑CNN, Faster R‑CNN, and subsequent classics.
-
+<img width="500" height="297" alt="test_detection_output" src="https://github.com/user-attachments/assets/cde67305-e167-4d87-8bf3-fc7a9d17ad2e" />
 
 ## Architecture
 This reproduction strictly follows the original four‑stage design: region proposal, CNN feature extraction, SVM & bounding‑box regressor training, and inference post‑processing, using pre‑trained AlexNet as the backbone.
